@@ -1,0 +1,34 @@
+<h2> Events List </h2> 
+
+<table>
+    <tr>
+        <th align="left"> 
+            Name
+        </th>
+        <th align="left"> 
+            Start date 
+        </th>
+        <th align="left"> 
+            End Date
+        </th>
+        <th align="left"> 
+            Time zone
+        </th>
+    </tr>
+    {% for event in events %}
+    <tr>
+        <td>
+            {{event.name}}
+        </td>
+        <td>
+            {{event.startDate|date('Y-m-d H:i:s')}}
+        </td>
+        <td>
+            {{event.endDate|date('Y-m-d H:i:s')}}
+        </td>
+        <td>
+            {{event.timeZone}}     
+        </td>
+    </tr>
+    {% endfor %}
+</table>

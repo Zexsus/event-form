@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+    {% include "default/events.html.twig" %}
+{% endblock %}
+
+
+
+{% block stylesheets %}
+<style>
+   #form{
+       display:flex;
+       flex-direction: column;
+   }
+
+   #form > div {
+       display:flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items:flex-start;
+       margin-bottom:15px;
+   }
+
+   #form > div div {
+       display:flex;
+        margin-right: 10px;
+   }
+
+   #form label{
+       width: 100%;
+       padding-bottom: 5px;
+       font-weight: bold;
+   }
+
+   #form ul {
+       list-style-type: none;
+       margin-left:0;
+       padding-left:0;
+       
+       color:red;
+   }
+
+   table{
+       min-width: 500px;
+   }
+
+   tr{
+       margin-bottom: 5px;
+   }
+
+   td, th{
+       padding-right:15px;
+   }
+</style>
+{% endblock %}
