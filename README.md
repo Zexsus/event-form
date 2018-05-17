@@ -1,10 +1,6 @@
 How to run
 ---
 
-Set database config in
-```
-app/config/parameters.yml
-```
 Run following commands
 
 ```
